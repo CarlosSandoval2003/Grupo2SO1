@@ -9,6 +9,80 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <!-- Título -->
+        <TextBlock Text="Administrador de Tareas Round Robin"
+                   VerticalAlignment="Top"
+                   HorizontalAlignment="Center"
+                   Margin="10"/>
 
+        <!-- Recuadro para la tabla -->
+        <Border Background="LightGray"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="10,40,0,0">
+            <Grid>
+                <!-- Tabla -->
+                <ListView x:Name="Tabla">
+                    <!-- Contenido de la tabla -->
+                </ListView>
+            </Grid>
+        </Border>
+
+        <!-- Recuadro superior derecho -->
+        <Border Background="LightGray"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Width="300"
+                Margin="0,40,10,0">
+            <Grid>
+                <!-- Etiqueta Quantum -->
+                <TextBlock Text="Quantum:"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           Margin="10"/>
+
+                <!-- Cuadro de entrada para Quantum -->
+                <TextBox x:Name="TextBoxQuantum"
+                         HorizontalAlignment="Left"
+                         Margin="10,0,10,0"/>
+
+                <!-- Checkbox para editar -->
+                <CheckBox Content="Editar"
+                          HorizontalAlignment="Left"
+                          Margin="10,5,10,0"/>
+
+                <!-- Botón Procesar -->
+                <Button Content="Procesar"
+                        HorizontalAlignment="Right"
+                        Margin="0,10,10,0"/>
+
+                <!-- Cuadro de entrada para Proceso -->
+                <TextBox x:Name="TextBoxProceso"
+                         HorizontalAlignment="Left"
+                         Margin="10,30,10,0"/>
+
+                <!-- Cuadro de entrada para Requerimiento CPU -->
+                <TextBox x:Name="TextBoxRequerimientoCPU"
+                         HorizontalAlignment="Left"
+                         Margin="10,60,10,0"/>
+
+                <!-- Botón Agregar -->
+                <Button Content="Agregar"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Top"
+                        Margin="10,90,0,0"/>
+
+                <!-- Tabla con 3 columnas y 1 fila -->
+                <ListView x:Name="Tabla2"
+                          VerticalAlignment="Top"
+                          HorizontalAlignment="Left"
+                          Width="200"
+                          Height="150"
+                          Margin="10,120,0,0">
+                    <!-- Contenido de la segunda tabla -->
+                </ListView>
+            </Grid>
+        </Border>
     </Grid>
 </Page>
+

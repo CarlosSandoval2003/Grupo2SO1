@@ -1,1 +1,1 @@
-C:\Users\Javier\Desktop\Visual\Administrador de Trareas\Administrador de Trareas.csproj;x86
+C:\Users\Javier\Desktop\PROYECTO\Grupo2SO1\Administrador de Trareas\Administrador de Trareas.csproj;x86

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Javier\\Desktop\\Visual\\Administrador de Trareas\\Administrador de Trareas.csproj": {}
+    "C:\\Users\\Javier\\Desktop\\PROYECTO\\Grupo2SO1\\Administrador de Trareas\\Administrador de Trareas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Javier\\Desktop\\Visual\\Administrador de Trareas\\Administrador de Trareas.csproj": {
+    "C:\\Users\\Javier\\Desktop\\PROYECTO\\Grupo2SO1\\Administrador de Trareas\\Administrador de Trareas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Javier\\Desktop\\Visual\\Administrador de Trareas\\Administrador de Trareas.csproj",
+        "projectUniqueName": "C:\\Users\\Javier\\Desktop\\PROYECTO\\Grupo2SO1\\Administrador de Trareas\\Administrador de Trareas.csproj",
         "projectName": "Administrador de Trareas",
-        "projectPath": "C:\\Users\\Javier\\Desktop\\Visual\\Administrador de Trareas\\Administrador de Trareas.csproj",
+        "projectPath": "C:\\Users\\Javier\\Desktop\\PROYECTO\\Grupo2SO1\\Administrador de Trareas\\Administrador de Trareas.csproj",
         "packagesPath": "C:\\Users\\Javier\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Javier\\Desktop\\Visual\\Administrador de Trareas\\obj\\",
+        "outputPath": "C:\\Users\\Javier\\Desktop\\PROYECTO\\Grupo2SO1\\Administrador de Trareas\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [

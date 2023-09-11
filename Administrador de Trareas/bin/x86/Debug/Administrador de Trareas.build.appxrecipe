@@ -10,22 +10,22 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>95a8e312-0e73-4006-96a7-d3f9c45dea8a</PackageIdentityName>
     <PackageIdentityPublisher>CN=Javier</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Javier\Desktop\Visual\Administrador de Trareas\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\Javier\Desktop\PROYECTO\Grupo2SO1\Administrador de Trareas\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Javier\Desktop\Visual\Administrador de Trareas\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\Javier\Desktop\PROYECTO\Grupo2SO1\Administrador de Trareas\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Javier\Desktop\PROYECTO\Grupo2SO1\Administrador de Trareas\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\bin\x86\Debug\Administrador de Trareas.exe">
+    <AppxPackagedFile Include="C:\Users\Javier\Desktop\PROYECTO\Grupo2SO1\Administrador de Trareas\bin\x86\Debug\Administrador de Trareas.exe">
       <PackagePath>entrypoint\Administrador de Trareas.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
@@ -370,55 +370,55 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\system.xml.xmlserializer\4.0.11\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\Javier\Desktop\PROYECTO\Grupo2SO1\Administrador de Trareas\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Javier\Desktop\PROYECTO\Grupo2SO1\Administrador de Trareas\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Javier\Desktop\PROYECTO\Grupo2SO1\Administrador de Trareas\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Javier\Desktop\PROYECTO\Grupo2SO1\Administrador de Trareas\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Javier\Desktop\PROYECTO\Grupo2SO1\Administrador de Trareas\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\Javier\Desktop\PROYECTO\Grupo2SO1\Administrador de Trareas\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\Javier\Desktop\PROYECTO\Grupo2SO1\Administrador de Trareas\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\Javier\Desktop\PROYECTO\Grupo2SO1\Administrador de Trareas\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\bin\x86\Debug\Administrador de Trareas.xr.xml">
+    <AppxPackagedFile Include="C:\Users\Javier\Desktop\PROYECTO\Grupo2SO1\Administrador de Trareas\bin\x86\Debug\Administrador de Trareas.xr.xml">
       <PackagePath>Administrador de Trareas.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Javier\Desktop\PROYECTO\Grupo2SO1\Administrador de Trareas\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Javier\Desktop\PROYECTO\Grupo2SO1\Administrador de Trareas\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\bin\x86\Debug\Pagina2.xbf">
+    <AppxPackagedFile Include="C:\Users\Javier\Desktop\PROYECTO\Grupo2SO1\Administrador de Trareas\bin\x86\Debug\Pagina2.xbf">
       <PackagePath>Pagina2.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.22621.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Javier\Desktop\PROYECTO\Grupo2SO1\Administrador de Trareas\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\bin\x86\Debug\Core\Administrador de Trareas.exe">
+    <AppxPackagedFile Include="C:\Users\Javier\Desktop\PROYECTO\Grupo2SO1\Administrador de Trareas\bin\x86\Debug\Core\Administrador de Trareas.exe">
       <PackagePath>Administrador de Trareas.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
