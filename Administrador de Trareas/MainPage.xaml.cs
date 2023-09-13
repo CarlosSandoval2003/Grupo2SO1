@@ -75,5 +75,94 @@ namespace Administrador_de_Trareas
             processListView.ItemsSource = null; // Limpiar la vista anterior
             processListView.ItemsSource = processes;
         }
-    
+        private async void ShowErrorMessage(string message)
+        {
+            var dialog = new Windows.UI.Popups.MessageDialog(message);
+            await dialog.ShowAsync();
+        }
+
+        private async void Process_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            if (processes.Count == 0)
+            {
+                // No hay procesos para procesar
+                return;
+            }
+
+            // Obtener el Canvas del XAML
+            var canvas = cpuCanvas;
+            int quantumValue = int.Parse(quantumValueText.Text);
+            // Inicializar una lista para llevar un seguimiento de las celdas registradas en el Canvas
+            List<Rectangle> rectangles = new List<Rectangle>();
+
+            // Recorrer la lista de procesos en un ciclo infinito (Round Robin)
+            while (true)
+            {
+                foreach (var process in processes.ToList()) // Usar ToList() para evitar modificaciones concurrentes
+                {
+                    // Crear un rectángulo con el color del proceso
+                    var rect = new Rectangle
+                    {
+                        Width = 20,
+                        Height = 20,
+                        Fill = new SolidColorBrush(process.Color),
+                    };
+
+                    // Agregar el rectángulo a la lista y al Canvas
+                    rectangles.Add(rect);
+                    canvas.Children.Add(rect);
+
+                    // Posicionar el rectángulo en el Canvas (al principio)
+                    Canvas.SetTop(rect, 0); // Posición fija en la parte superior
+                    Canvas.SetLeft(rect, 0);
+
+                    // Reducir los recursos del proceso según el quantum
+                    int quantumResources = quantumValue * 10;
+                    process.Resources -= quantumResources;
+
+                    // Mover todas las celdas registradas (incluyendo el rectángulo en blanco) a la derecha
+                    foreach (var existingRect in rectangles)
+                    {
+                        Canvas.SetLeft(existingRect, Canvas.GetLeft(existingRect) + rect.Width);
+                    }
+
+                    // Verificar si el proceso se ha completado o quedó en negativo
+                    if (process.Resources < 0 & process.Resources != 0)
+                    {
+                        // Agregar un rectángulo en blanco (color blanco)
+                        var emptyRect = new Rectangle
+                        {
+                            Width = 20,
+                            Height = 20,
+                            Fill = new SolidColorBrush(Colors.White),
+                        };
+
+                        // Agregar el rectángulo en blanco a la lista y al Canvas
+                        rectangles.Add(emptyRect);
+                        canvas.Children.Add(emptyRect);
+
+                        // Mover todas las celdas registradas (incluyendo el rectángulo en blanco) a la derecha
+                        foreach (var existingRect in rectangles)
+                        {
+                            Canvas.SetLeft(existingRect, Canvas.GetLeft(existingRect) + emptyRect.Width);
+                        }
+
+                        // Esperar 500 milisegundos (0.5 segundos)
+                        await Task.Delay(500);
+
+                        // Quitar el proceso completado de la lista y el rectángulo del Canvas
+                        processes.Remove(process);
+
+                    }
+                    else if (process.Resources == 0)
+                    {
+                        // Quitar el proceso completado de la lista y el rectángulo del Canvas
+                        processes.Remove(process);
+                    }
+                    else
+                    {
+                        // Esperar 500 milisegundos (0.5 segundos)
+                        await Task.Delay(500);
+                    }
+                }
 
