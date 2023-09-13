@@ -2,15 +2,75 @@
     x:Class="Administrador_de_Trareas.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:Administrador_de_Trareas"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock Text="HOLA MUNDO" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36"/>
-        <Button Content="Aceptar" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,20" Click="AbrirOtraPagina_Click"/>
+        <!-- Controles para ingresar procesos, recursos y quantums -->
+        <Grid Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel VerticalAlignment="Top">
+                <TextBlock Text="Nombre del proceso:" Margin="630,10,0,0"/>
+                <TextBox x:Name="processNameTextBox" PlaceholderText="Nombre del proceso" Width="200"/>
+                <TextBlock Text="Recursos:" Margin="630,10,0,0"/>
+                <TextBox x:Name="resourceTextBox" PlaceholderText="Recursos" Width="200"/>
+                <TextBlock Text="Quantum:" Margin="630,10,0,0"/>
+                <!-- Barra de desplazamiento para Quantum -->
+                <Slider x:Name="quantumSlider" Minimum="1" Maximum="10" Value="1" Width="200" Margin="0,10,0,0"/>
+                <TextBlock Text="Quantum seleccionado:" Margin="630,10,0,0"/>
+                <TextBlock Text="{Binding ElementName=quantumSlider, Path=Value}" x:Name="quantumValueText" Margin="630,10,0,0"/>
+                <Button Content="Agregar Proceso" Click="AddProcess_Click" Width="200" Margin="630,10,0,0"/>
+                <Button Content="Procesar" Click="Process_Click" Width="200" Margin="630,10,0,0"/>
+
+            </StackPanel>
+            <!-- Lista de procesos -->
+            <ListView x:Name="processListView" Grid.Column="1" VerticalAlignment="Top">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="{Binding Name}" />
+                            <TextBlock Grid.Column="1" Text="{Binding Resources}" />
+                            <Rectangle Grid.Column="2" Width="20" Height="20">
+                                <Rectangle.Fill>
+                                    <SolidColorBrush Color="{Binding Color}" />
+                                </Rectangle.Fill>
+                            </Rectangle>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                <!-- Títulos de las columnas -->
+                <ListView.Header>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="Nombre" FontWeight="Bold" />
+                        <TextBlock Grid.Column="1" Text="Recursos" FontWeight="Bold" />
+                        <TextBlock Grid.Column="2" Text="Color" FontWeight="Bold" />
+                    </Grid>
+                </ListView.Header>
+            </ListView>
+        </Grid>
+
+        <!-- Gráfico para representar la asignación de CPU -->
+        <Canvas x:Name="cpuCanvas" Background="White" Margin="20,360,20,20" />
     </Grid>
+
+
+
+
+
 
 </Page>
