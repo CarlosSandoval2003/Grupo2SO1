@@ -153,7 +153,7 @@ namespace Administrador_de_Trareas
                         processes.Remove(process);
 
                     }
-                    else if (process.Resources == 0)
+                    else if(process.Resources == 0)
                     {
                         // Quitar el proceso completado de la lista y el rectángulo del Canvas
                         processes.Remove(process);
@@ -231,3 +231,5 @@ public class Process
         Color = color; // Asignar el color
     }
 }
+
+

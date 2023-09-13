@@ -16,21 +16,21 @@
 
             <StackPanel VerticalAlignment="Top">
                 <TextBlock Text="Nombre del proceso:" Margin="630,10,0,0"/>
-                <TextBox x:Name="processNameTextBox" PlaceholderText="Nombre del proceso" Width="200"/>
+                <TextBox x:ConnectionId='3' x:Name="processNameTextBox" PlaceholderText="Nombre del proceso" Width="200"/>
                 <TextBlock Text="Recursos:" Margin="630,10,0,0"/>
-                <TextBox x:Name="resourceTextBox" PlaceholderText="Recursos" Width="200"/>
+                <TextBox x:ConnectionId='4' x:Name="resourceTextBox" PlaceholderText="Recursos" Width="200"/>
                 <TextBlock Text="Quantum:" Margin="630,10,0,0"/>
                 <!-- Barra de desplazamiento para Quantum -->
-                <Slider x:Name="quantumSlider" Minimum="1" Maximum="10" Value="1" Width="200" Margin="0,10,0,0"/>
+                <Slider x:ConnectionId='5' x:Name="quantumSlider" Minimum="1" Maximum="10" Value="1" Width="200" Margin="0,10,0,0"/>
                 <TextBlock Text="Quantum seleccionado:" Margin="630,10,0,0"/>
-                <TextBlock Text="{Binding ElementName=quantumSlider, Path=Value}" x:Name="quantumValueText" Margin="630,10,0,0"/>
-                <Button Content="Agregar Proceso" Click="AddProcess_Click" Width="200" Margin="630,10,0,0"/>
-                <Button Content="Procesar" Click="Process_Click" Width="200" Margin="630,10,0,0"/>
+                <TextBlock x:ConnectionId='6' Text="{Binding ElementName=quantumSlider, Path=Value}" x:Name="quantumValueText" Margin="630,10,0,0"/>
+                <Button x:ConnectionId='7' Content="Agregar Proceso"                          Width="200" Margin="630,10,0,0"/>
+                <Button x:ConnectionId='8' Content="Procesar"                       Width="200" Margin="630,10,0,0"/>
 
             </StackPanel>
 
             <!-- Lista de procesos -->
-            <ListView x:Name="processListView" Grid.Column="1" VerticalAlignment="Top">
+            <ListView x:ConnectionId='2' x:Name="processListView" Grid.Column="1" VerticalAlignment="Top">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <Grid>
@@ -72,7 +72,7 @@
         </Grid>
 
         <!-- Gráfico para representar la asignación de CPU -->
-        <Canvas x:Name="cpuCanvas" Background="White" Margin="20,360,20,20" />
+        <Canvas x:ConnectionId='1' x:Name="cpuCanvas" Background="White" Margin="20,360,20,20" />
     </Grid>
 
 
@@ -81,4 +81,5 @@
 
 
 </Page>
+
 
