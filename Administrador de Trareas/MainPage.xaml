@@ -62,3 +62,15 @@
                     </Grid>
                 </ListView.Header>
             </ListView>
+        </Grid>
+
+        <!-- Gráfico para representar la asignación de CPU -->
+        <Canvas x:Name="cpuCanvas" Background="White" Margin="20,360,20,20" />
+    </Grid>
+
+
+
+
+
+
+</Page>
