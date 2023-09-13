@@ -165,4 +165,70 @@ namespace Administrador_de_Trareas
                         await Task.Delay(500);
                     }
                 }
+                // Verificar si todos los procesos se han completado
+                if (processes.Count == 0)
+                {
+                    break; // Salir del ciclo si no hay procesos en la cola
+                }
+            }
+        }
+
+
+
+        private Color GetRandomColor()
+        {
+            Random rand = new Random();
+            byte[] colorBytes = new byte[3];
+            rand.NextBytes(colorBytes);
+
+            return Color.FromArgb(255, colorBytes[0], colorBytes[1], colorBytes[2]);
+        }
+
+        private void QuantumSlider_ValueChanged(object sender, RangeBaseValueChangedEventArgs e)
+        {
+            int quantumValue = (int)quantumSlider.Value;
+            quantumValueText.Text = $"Quantum seleccionado: {quantumValue}";
+        }
+
+        private void DrawProcess(Process process, Color color)
+        {
+            int width = 50;
+            int height = 30;
+
+            Rectangle rectangle = new Rectangle
+            {
+                Width = width,
+                Height = height,
+                Fill = new SolidColorBrush(color)
+            };
+
+            // Posición y tamaño del proceso en el gráfico de CPU
+            double left = currentProcessIndex * (width + 10);
+            double top = 0;
+            Canvas.SetLeft(rectangle, left);
+            Canvas.SetTop(rectangle, top);
+
+            cpuCanvas.Children.Add(rectangle);
+            currentProcessIndex++;
+        }
+
+
+    }
+}
+
+public class Process
+{
+    public string Name { get; set; }
+    public int Resources { get; set; }
+    public int Quantum { get; set; }
+    public Color Color { get; set; } // Propiedad para el color
+
+    public Process(string name, int resources, int quantum, Color color)
+    {
+        Name = name;
+        Resources = resources;
+        Quantum = quantum;
+        Color = color; // Asignar el color
+    }
+}
 
