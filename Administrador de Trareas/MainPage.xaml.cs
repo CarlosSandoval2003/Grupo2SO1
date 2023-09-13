@@ -20,8 +20,6 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Shapes;
 using System.Threading.Tasks;
 
-// La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0xc0a
-
 namespace Administrador_de_Trareas
 {
     public sealed partial class MainPage : Page
@@ -75,6 +73,7 @@ namespace Administrador_de_Trareas
             processListView.ItemsSource = null; // Limpiar la vista anterior
             processListView.ItemsSource = processes;
         }
+
         private async void ShowErrorMessage(string message)
         {
             var dialog = new Windows.UI.Popups.MessageDialog(message);
@@ -165,6 +164,7 @@ namespace Administrador_de_Trareas
                         await Task.Delay(500);
                     }
                 }
+
                 // Verificar si todos los procesos se han completado
                 if (processes.Count == 0)
                 {
@@ -231,4 +231,3 @@ public class Process
         Color = color; // Asignar el color
     }
 }
-
