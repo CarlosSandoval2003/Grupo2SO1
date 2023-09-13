@@ -48,3 +48,17 @@
                         </Grid>
                     </DataTemplate>
                 </ListView.ItemTemplate>
+                <!-- Títulos de las columnas -->
+                <ListView.Header>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="150"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="Nombre" FontWeight="Bold" />
+                        <TextBlock Grid.Column="1" Text="Recursos" FontWeight="Bold" />
+                        <TextBlock Grid.Column="2" Text="Color" FontWeight="Bold" />
+                    </Grid>
+                </ListView.Header>
+            </ListView>
