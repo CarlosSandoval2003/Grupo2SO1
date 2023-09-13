@@ -28,4 +28,23 @@
                 <Button Content="Procesar" Click="Process_Click" Width="200" Margin="630,10,0,0"/>
 
             </StackPanel>
-
+            <!-- Lista de procesos -->
+            <ListView x:Name="processListView" Grid.Column="1" VerticalAlignment="Top">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="150"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Column="0" Text="{Binding Name}" />
+                            <TextBlock Grid.Column="1" Text="{Binding Resources}" />
+                            <Rectangle Grid.Column="2" Width="20" Height="20">
+                                <Rectangle.Fill>
+                                    <SolidColorBrush Color="{Binding Color}" />
+                                </Rectangle.Fill>
+                            </Rectangle>
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
