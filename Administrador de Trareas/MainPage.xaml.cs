@@ -24,18 +24,56 @@ using System.Threading.Tasks;
 
 namespace Administrador_de_Trareas
 {
-    /// <summary>
-    /// Página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
-    /// </summary>
     public sealed partial class MainPage : Page
     {
+        private List<Process> processes = new List<Process>();
+        private int currentProcessIndex = 0;
+        private int quantumValue = 1; // Valor inicial del quantum
+        private Dictionary<Process, double> cellPositions = new Dictionary<Process, double>();
+
         public MainPage()
         {
             this.InitializeComponent();
         }
-        private void AbrirOtraPagina_Click(object sender, RoutedEventArgs e)
+
+        private void AddProcess_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Pagina2));
+            // Obtener valores de los campos de entrada
+            string name = processNameTextBox.Text.Trim();
+            int resources;
+            int quantum;
+
+            // Verificar si alguno de los campos está vacío
+            if (string.IsNullOrWhiteSpace(name) ||
+                !int.TryParse(resourceTextBox.Text.Trim(), out resources) ||
+                !int.TryParse(quantumSlider.Value.ToString(), out quantum) ||
+                resources <= 0)
+            {
+                ShowErrorMessage("Por favor, complete todos los campos correctamente.");
+                return; // Salir de la función sin agregar el proceso
+            }
+
+            // Verificar si el proceso con el mismo nombre ya existe
+            if (processes.Any(p => p.Name == name))
+            {
+                ShowErrorMessage($"Ya existe un proceso con el nombre '{name}'.");
+                return; // Salir de la función sin agregar el proceso
+            }
+
+            // Asignar un color único al proceso
+            Color color = GetRandomColor();
+
+            // Crear y agregar el proceso a la lista
+            Process process = new Process(name, resources, quantum, color);
+            processes.Add(process);
+
+            // Limpiar campos de entrada
+            processNameTextBox.Text = "";
+            resourceTextBox.Text = "";
+
+            // Actualizar la lista de la interfaz de usuario
+            processListView.ItemsSource = null; // Limpiar la vista anterior
+            processListView.ItemsSource = processes;
         }
-    }
-}
+    
+
