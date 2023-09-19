@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>JAVIERSCLAPTOP</Machine>
-    <WindowsUser>Javier</WindowsUser>
+    <Machine>LENOVO-AG</Machine>
+    <WindowsUser>abima</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>95a8e312-0e73-4006-96a7-d3f9c45dea8a</PackageIdentityName>
     <PackageIdentityPublisher>CN=Javier</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\Javier\Desktop\Visual\Administrador de Trareas\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\abima\pRobin\Grupo2SO1\Administrador de Trareas\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,8 +18,8 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\Javier\Desktop\Visual\Administrador de Trareas\bin\x86\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>2FDB24CDA3F0986805E75958309F840968ACC3CDDA5D43875B71DD750792432C</RegisteredManifestChecksum>
+    <LayoutDir>C:\Users\abima\pRobin\Grupo2SO1\Administrador de Trareas\bin\x86\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>170D206FFD8103A9CCBDE41E8F7CC6A6224F64A3962B14DA90632DBC61311278</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>95a8e312-0e73-4006-96a7-d3f9c45dea8a_1.0.0.0_x86__j6j5z4mnvcpja</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>95a8e312-0e73-4006-96a7-d3f9c45dea8a_j6j5z4mnvcpja!App</RegisteredUserModeAppID>
     <RegisteredPackageID>95a8e312-0e73-4006-96a7-d3f9c45dea8a</RegisteredPackageID>
@@ -27,16 +27,16 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\abima\pRobin\Grupo2SO1\Administrador de Trareas\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-09-13T04:15:57.092</Modified>
+      <Modified>2023-09-18T22:18:52.220</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\bin\x86\Debug\Administrador de Trareas.exe">
+    <AppxPackagedFile Include="C:\Users\abima\pRobin\Grupo2SO1\Administrador de Trareas\bin\x86\Debug\Administrador de Trareas.exe">
       <PackagePath>entrypoint\Administrador de Trareas.exe</PackagePath>
-      <Modified>2023-09-13T04:15:56.700</Modified>
+      <Modified>2023-09-18T22:18:48.909</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -494,71 +494,71 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2016-06-12T05:15:04.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\abima\pRobin\Grupo2SO1\Administrador de Trareas\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2023-09-06T22:16:58.524</Modified>
+      <Modified>2023-09-18T22:16:31.180</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\abima\pRobin\Grupo2SO1\Administrador de Trareas\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2023-09-06T13:07:29.371</Modified>
+      <Modified>2023-09-18T22:16:31.172</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\abima\pRobin\Grupo2SO1\Administrador de Trareas\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-09-06T13:07:29.374</Modified>
+      <Modified>2023-09-18T22:16:31.173</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\abima\pRobin\Grupo2SO1\Administrador de Trareas\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-09-06T13:07:29.376</Modified>
+      <Modified>2023-09-18T22:16:31.174</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\abima\pRobin\Grupo2SO1\Administrador de Trareas\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-09-06T13:07:29.377</Modified>
+      <Modified>2023-09-18T22:16:31.175</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\abima\pRobin\Grupo2SO1\Administrador de Trareas\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-09-06T13:07:29.377</Modified>
+      <Modified>2023-09-18T22:16:31.175</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\abima\pRobin\Grupo2SO1\Administrador de Trareas\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-09-06T13:07:29.378</Modified>
+      <Modified>2023-09-18T22:16:31.176</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\abima\pRobin\Grupo2SO1\Administrador de Trareas\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-09-06T13:07:29.379</Modified>
+      <Modified>2023-09-18T22:16:31.176</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\bin\x86\Debug\Administrador de Trareas.xr.xml">
+    <AppxPackagedFile Include="C:\Users\abima\pRobin\Grupo2SO1\Administrador de Trareas\bin\x86\Debug\Administrador de Trareas.xr.xml">
       <PackagePath>Administrador de Trareas.xr.xml</PackagePath>
-      <Modified>2023-09-13T00:58:59.503</Modified>
+      <Modified>2023-09-18T22:16:31.956</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\abima\pRobin\Grupo2SO1\Administrador de Trareas\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2023-09-06T22:28:32.103</Modified>
+      <Modified>2023-09-18T22:18:48.790</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\abima\pRobin\Grupo2SO1\Administrador de Trareas\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2023-09-13T03:47:18.421</Modified>
+      <Modified>2023-09-18T22:18:48.790</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\bin\x86\Debug\Pagina2.xbf">
+    <AppxPackagedFile Include="C:\Users\abima\pRobin\Grupo2SO1\Administrador de Trareas\bin\x86\Debug\Pagina2.xbf">
       <PackagePath>Pagina2.xbf</PackagePath>
-      <Modified>2023-09-06T22:28:32.103</Modified>
+      <Modified>2023-09-18T22:18:48.790</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.22621.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2023-05-12T08:38:22.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\abima\pRobin\Grupo2SO1\Administrador de Trareas\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-09-06T22:28:33.942</Modified>
+      <Modified>2023-09-18T22:18:51.564</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Javier\Desktop\Visual\Administrador de Trareas\bin\x86\Debug\Core\Administrador de Trareas.exe">
+    <AppxPackagedFile Include="C:\Users\abima\pRobin\Grupo2SO1\Administrador de Trareas\bin\x86\Debug\Core\Administrador de Trareas.exe">
       <PackagePath>Administrador de Trareas.exe</PackagePath>
-      <Modified>2023-09-13T04:15:57.089</Modified>
+      <Modified>2023-09-18T22:18:52.208</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "rGkpI3RI3Mm2WSeiqsz0iimfmls6WR4vybrPYcsln6aqE202lQibafabHbst51I5d2i3FKmnKs6v+n1L/jiN2w==",
+  "dgSpecHash": "HTGx7wpd2ZDNkf/CBwB+ToDgVRBGRj8uSVzUxkd4EUru108NsYuFha3BC/NV8GbA63XJAgn4sVE2ZD7nx4Ho/g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Javier\\Desktop\\Visual\\Administrador de Trareas\\Administrador de Trareas.csproj",
+  "projectFilePath": "C:\\Users\\abima\\pRobin\\Grupo2SO1\\Administrador de Trareas\\Administrador de Trareas.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\microsoft.net.native.compiler\\1.7.6\\microsoft.net.native.compiler.1.7.6.nupkg.sha512",

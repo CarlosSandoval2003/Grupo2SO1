@@ -28,11 +28,34 @@ namespace Administrador_de_Trareas
         private int currentProcessIndex = 0;
         private int quantumValue = 1; // Valor inicial del quantum
         private Dictionary<Process, double> cellPositions = new Dictionary<Process, double>();
+        private double currentVerticalPosition = 0;
+        private Dictionary<Process, double> verticalPositions = new Dictionary<Process, double>();
+        int filas = 1;
+        int indiceDeseado = 0;
+        int indiceDeseado1 = 0;
+        int indiceDeseado2 = 0;
+        int indiceDeseado3 = 0;
+        int indiceDeseado4 = 0;
+        int indiceDeseado5 = 0;
+        int indiceDeseado6 = 0;
+        int indiceDeseado7 = 0;
+        int indiceDeseado8 = 0;
+        int change = 0;
+
+
+
+
 
         public MainPage()
         {
             this.InitializeComponent();
+            // Inicializar el diccionario de posiciones verticales
+            foreach (var process in processes)
+            {
+                verticalPositions[process] = 0; // Iniciar en la parte superior
+            }
         }
+
 
         private void AddProcess_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
@@ -74,6 +97,7 @@ namespace Administrador_de_Trareas
             processListView.ItemsSource = processes;
         }
 
+
         private async void ShowErrorMessage(string message)
         {
             var dialog = new Windows.UI.Popups.MessageDialog(message);
@@ -90,87 +114,172 @@ namespace Administrador_de_Trareas
 
             // Obtener el Canvas del XAML
             var canvas = cpuCanvas;
-            int quantumValue = int.Parse(quantumValueText.Text);
+            int quantumValue = int.Parse(quantumValueText.Text); // Obtener el valor del quantum
+
             // Inicializar una lista para llevar un seguimiento de las celdas registradas en el Canvas
             List<Rectangle> rectangles = new List<Rectangle>();
 
-            // Recorrer la lista de procesos en un ciclo infinito (Round Robin)
-            while (true)
+            // Crear una función asincrónica para procesar los procesos
+            async Task ProcessProcessesAsync()
             {
-                foreach (var process in processes.ToList()) // Usar ToList() para evitar modificaciones concurrentes
+                // Recorrer la lista de procesos en un ciclo infinito (Round Robin)
+                while (true)
                 {
-                    // Crear un rectángulo con el color del proceso
-                    var rect = new Rectangle
+                    foreach (var process in processes.ToList()) // Usar ToList() para evitar modificaciones concurrentes
                     {
-                        Width = 20,
-                        Height = 20,
-                        Fill = new SolidColorBrush(process.Color),
-                    };
 
-                    // Agregar el rectángulo a la lista y al Canvas
-                    rectangles.Add(rect);
-                    canvas.Children.Add(rect);
-
-                    // Posicionar el rectángulo en el Canvas (al principio)
-                    Canvas.SetTop(rect, 0); // Posición fija en la parte superior
-                    Canvas.SetLeft(rect, 0);
-
-                    // Reducir los recursos del proceso según el quantum
-                    int quantumResources = quantumValue * 10;
-                    process.Resources -= quantumResources;
-
-                    // Mover todas las celdas registradas (incluyendo el rectángulo en blanco) a la derecha
-                    foreach (var existingRect in rectangles)
-                    {
-                        Canvas.SetLeft(existingRect, Canvas.GetLeft(existingRect) + rect.Width);
-                    }
-
-                    // Verificar si el proceso se ha completado o quedó en negativo
-                    if (process.Resources < 0 & process.Resources != 0)
-                    {
-                        // Agregar un rectángulo en blanco (color blanco)
-                        var emptyRect = new Rectangle
+                        // Repetir el ciclo de resta de 10 recursos según el quantum seleccionado
+                        for (int i = 0; i < quantumValue && process.Resources > 0; i++) // Verificar si quedan recursos
                         {
-                            Width = 20,
-                            Height = 20,
-                            Fill = new SolidColorBrush(Colors.White),
-                        };
+                            await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
+                            {
+                                // Crear un rectángulo con el color del proceso
+                                var rect = new Rectangle
+                                {
+                                    Width = 100,
+                                    Height = 40,
+                                    Fill = new SolidColorBrush(process.Color),
+                                };
 
-                        // Agregar el rectángulo en blanco a la lista y al Canvas
-                        rectangles.Add(emptyRect);
-                        canvas.Children.Add(emptyRect);
+                                // Agregar el rectángulo a la lista y al Canvas
+                                rectangles.Add(rect);
+                                canvas.Children.Add(rect);
 
-                        // Mover todas las celdas registradas (incluyendo el rectángulo en blanco) a la derecha
-                        foreach (var existingRect in rectangles)
-                        {
-                            Canvas.SetLeft(existingRect, Canvas.GetLeft(existingRect) + emptyRect.Width);
+                                // Posicionar el rectángulo en el Canvas (al principio)
+                                Canvas.SetTop(rect, 0); // Posición fija en la parte superior
+                                Canvas.SetLeft(rect, 0);
+
+
+                                // Reducir 10 recursos del proceso en cada ciclo
+                                process.Resources -= 10;
+
+                                // Mover todas las celdas registradas (incluyendo el rectángulo en blanco) a la derecha
+                                foreach (var existingRect in rectangles)
+                                {
+                                    Canvas.SetLeft(existingRect, Canvas.GetLeft(existingRect) + rect.Width);
+                                }
+
+                                change++;
+
+                                if (change >= 15)
+                                {
+                                    var actualRect = rectangles[indiceDeseado];
+                                    Canvas.SetTop(actualRect, 80); // Posición fija en la parte superior
+                                    Canvas.SetLeft(actualRect, 100);
+                                    indiceDeseado++;
+                                }
+
+                                if (change >= 29)
+                                {
+                                    var actualRect = rectangles[indiceDeseado1];
+                                    Canvas.SetTop(actualRect, 160); // Posición fija en la parte superior
+                                    Canvas.SetLeft(actualRect, 100);
+                                    indiceDeseado1++;
+                                }
+
+                                if (change >= 43)
+                                {
+                                    var actualRect = rectangles[indiceDeseado2];
+                                    Canvas.SetTop(actualRect, 240); // Posición fija en la parte superior
+                                    Canvas.SetLeft(actualRect, 100);
+                                    indiceDeseado2++;
+                                }
+
+                                if (change >= 57)
+                                {
+                                    var actualRect = rectangles[indiceDeseado3];
+                                    Canvas.SetTop(actualRect, 320); // Posición fija en la parte superior
+                                    Canvas.SetLeft(actualRect, 100);
+                                    indiceDeseado3++;
+                                }
+
+                                if (change >= 71)
+                                {
+                                    var actualRect = rectangles[indiceDeseado4];
+                                    Canvas.SetTop(actualRect, 400); // Posición fija en la parte superior
+                                    Canvas.SetLeft(actualRect, 100);
+                                    indiceDeseado4++;
+                                }
+
+                                if (change >= 85)
+                                {
+                                    var actualRect = rectangles[indiceDeseado5];
+                                    Canvas.SetTop(actualRect, 480); // Posición fija en la parte superior
+                                    Canvas.SetLeft(actualRect, 100);
+                                    indiceDeseado5++;
+                                }
+
+                                if (change >= 99)
+                                {
+                                    var actualRect = rectangles[indiceDeseado6];
+                                    Canvas.SetTop(actualRect, 560); // Posición fija en la parte superior
+                                    Canvas.SetLeft(actualRect, 100);
+                                    indiceDeseado6++;
+                                }
+
+                                if (change >= 113)
+                                {
+                                    var actualRect = rectangles[indiceDeseado7];
+                                    Canvas.SetTop(actualRect, 640); // Posición fija en la parte superior
+                                    Canvas.SetLeft(actualRect, 100);
+                                    indiceDeseado7++;
+                                }
+
+                                if (change >= 128)
+                                {
+                                    var actualRect = rectangles[indiceDeseado8];
+                                    Canvas.SetTop(actualRect, 720); // Posición fija en la parte superior
+                                    Canvas.SetLeft(actualRect, 100);
+                                    indiceDeseado8++;
+                                }
+                            });
+
+                            // Verificar si el proceso se ha completado o quedó en negativo
+                            if (process.Resources <= 0)
+                            {
+                                await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
+                                {
+                                    // Agregar un rectángulo en blanco (color blanco) por cada repetición pendiente
+                                    for (int j = i + 1; j < quantumValue; j++)
+                                    {
+                                        var emptyRect = new Rectangle
+                                        {
+                                            Width = 20,
+                                            Height = 20,
+                                            Fill = new SolidColorBrush(Colors.White),
+                                        };
+
+                                        // Agregar el rectángulo en blanco a la lista y al Canvas
+                                        rectangles.Add(emptyRect);
+                                        canvas.Children.Add(emptyRect);
+
+                                        // Mover todas las celdas registradas (incluyendo el rectángulo en blanco) a la derecha
+                                        foreach (var existingRect in rectangles)
+                                        {
+                                            Canvas.SetLeft(existingRect, Canvas.GetLeft(existingRect) + emptyRect.Width);
+                                        }
+
+                                    }
+
+                                    // Quitar el proceso completado de la lista y el rectángulo del Canvas
+                                    processes.Remove(process);
+                                });
+
+                                // Esperar 500 milisegundos (0.5 segundos)
+                                await Task.Delay(500);
+                            }
+                            else
+                            {
+                                // Esperar 500 milisegundos (0.5 segundos) antes de repetir el ciclo
+                                await Task.Delay(500);
+                            }
                         }
-
-                        // Esperar 500 milisegundos (0.5 segundos)
-                        await Task.Delay(500);
-
-                        // Quitar el proceso completado de la lista y el rectángulo del Canvas
-                        processes.Remove(process);
-
                     }
-                    else if(process.Resources == 0)
-                    {
-                        // Quitar el proceso completado de la lista y el rectángulo del Canvas
-                        processes.Remove(process);
-                    }
-                    else
-                    {
-                        // Esperar 500 milisegundos (0.5 segundos)
-                        await Task.Delay(500);
-                    }
-                }
-
-                // Verificar si todos los procesos se han completado
-                if (processes.Count == 0)
-                {
-                    break; // Salir del ciclo si no hay procesos en la cola
                 }
             }
+
+            // Ejecutar la función asincrónica en segundo plano
+            await Task.Run(() => ProcessProcessesAsync());
         }
 
 
@@ -190,28 +299,6 @@ namespace Administrador_de_Trareas
             quantumValueText.Text = $"Quantum seleccionado: {quantumValue}";
         }
 
-        private void DrawProcess(Process process, Color color)
-        {
-            int width = 50;
-            int height = 30;
-
-            Rectangle rectangle = new Rectangle
-            {
-                Width = width,
-                Height = height,
-                Fill = new SolidColorBrush(color)
-            };
-
-            // Posición y tamaño del proceso en el gráfico de CPU
-            double left = currentProcessIndex * (width + 10);
-            double top = 0;
-            Canvas.SetLeft(rectangle, left);
-            Canvas.SetTop(rectangle, top);
-
-            cpuCanvas.Children.Add(rectangle);
-            currentProcessIndex++;
-        }
-
 
     }
 }
@@ -221,15 +308,18 @@ public class Process
     public string Name { get; set; }
     public int Resources { get; set; }
     public int Quantum { get; set; }
-    public Color Color { get; set; } // Propiedad para el color
+    public Color Color { get; set; }
+    public int Cambio { get; set; }
+    public double VerticalPosition { get; set; }
 
     public Process(string name, int resources, int quantum, Color color)
     {
         Name = name;
         Resources = resources;
         Quantum = quantum;
-        Color = color; // Asignar el color
+        Color = color;
+        Cambio = 0;
+        VerticalPosition = 0;
     }
 }
-
 
