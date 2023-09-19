@@ -244,8 +244,8 @@ namespace Administrador_de_Trareas
                                     {
                                         var emptyRect = new Rectangle
                                         {
-                                            Width = 20,
-                                            Height = 20,
+                                            Width = 100,
+                                            Height = 40,
                                             Fill = new SolidColorBrush(Colors.White),
                                         };
 
@@ -258,11 +258,83 @@ namespace Administrador_de_Trareas
                                         {
                                             Canvas.SetLeft(existingRect, Canvas.GetLeft(existingRect) + emptyRect.Width);
                                         }
+                                        change++;
 
+                                        if (change >= 15)
+                                        {
+                                            var actualRect = rectangles[indiceDeseado];
+                                            Canvas.SetTop(actualRect, 80); // Posición fija en la parte superior
+                                            Canvas.SetLeft(actualRect, 100);
+                                            indiceDeseado++;
+                                        }
+
+                                        if (change >= 29)
+                                        {
+                                            var actualRect = rectangles[indiceDeseado1];
+                                            Canvas.SetTop(actualRect, 160); // Posición fija en la parte superior
+                                            Canvas.SetLeft(actualRect, 100);
+                                            indiceDeseado1++;
+                                        }
+
+                                        if (change >= 43)
+                                        {
+                                            var actualRect = rectangles[indiceDeseado2];
+                                            Canvas.SetTop(actualRect, 240); // Posición fija en la parte superior
+                                            Canvas.SetLeft(actualRect, 100);
+                                            indiceDeseado2++;
+                                        }
+
+                                        if (change >= 57)
+                                        {
+                                            var actualRect = rectangles[indiceDeseado3];
+                                            Canvas.SetTop(actualRect, 320); // Posición fija en la parte superior
+                                            Canvas.SetLeft(actualRect, 100);
+                                            indiceDeseado3++;
+                                        }
+
+                                        if (change >= 71)
+                                        {
+                                            var actualRect = rectangles[indiceDeseado4];
+                                            Canvas.SetTop(actualRect, 400); // Posición fija en la parte superior
+                                            Canvas.SetLeft(actualRect, 100);
+                                            indiceDeseado4++;
+                                        }
+
+                                        if (change >= 85)
+                                        {
+                                            var actualRect = rectangles[indiceDeseado5];
+                                            Canvas.SetTop(actualRect, 480); // Posición fija en la parte superior
+                                            Canvas.SetLeft(actualRect, 100);
+                                            indiceDeseado5++;
+                                        }
+
+                                        if (change >= 99)
+                                        {
+                                            var actualRect = rectangles[indiceDeseado6];
+                                            Canvas.SetTop(actualRect, 560); // Posición fija en la parte superior
+                                            Canvas.SetLeft(actualRect, 100);
+                                            indiceDeseado6++;
+                                        }
+
+                                        if (change >= 113)
+                                        {
+                                            var actualRect = rectangles[indiceDeseado7];
+                                            Canvas.SetTop(actualRect, 640); // Posición fija en la parte superior
+                                            Canvas.SetLeft(actualRect, 100);
+                                            indiceDeseado7++;
+                                        }
+
+                                        if (change >= 128)
+                                        {
+                                            var actualRect = rectangles[indiceDeseado8];
+                                            Canvas.SetTop(actualRect, 720); // Posición fija en la parte superior
+                                            Canvas.SetLeft(actualRect, 100);
+                                            indiceDeseado8++;
+                                        }
                                     }
 
                                     // Quitar el proceso completado de la lista y el rectángulo del Canvas
-                                    processes.Remove(process);
+                                    //processes.Remove(process);
                                 });
 
                                 // Esperar 500 milisegundos (0.5 segundos)

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\abima\\pRobin\\Grupo2SO1\\Administrador de Trareas\\Administrador de Trareas.csproj": {}
+    "C:\\Users\\Javier\\Desktop\\Nueva carpeta\\Grupo2SO1\\Administrador de Trareas\\Administrador de Trareas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\abima\\pRobin\\Grupo2SO1\\Administrador de Trareas\\Administrador de Trareas.csproj": {
+    "C:\\Users\\Javier\\Desktop\\Nueva carpeta\\Grupo2SO1\\Administrador de Trareas\\Administrador de Trareas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\abima\\pRobin\\Grupo2SO1\\Administrador de Trareas\\Administrador de Trareas.csproj",
+        "projectUniqueName": "C:\\Users\\Javier\\Desktop\\Nueva carpeta\\Grupo2SO1\\Administrador de Trareas\\Administrador de Trareas.csproj",
         "projectName": "Administrador de Trareas",
-        "projectPath": "C:\\Users\\abima\\pRobin\\Grupo2SO1\\Administrador de Trareas\\Administrador de Trareas.csproj",
-        "packagesPath": "C:\\Users\\abima\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\abima\\pRobin\\Grupo2SO1\\Administrador de Trareas\\obj\\",
+        "projectPath": "C:\\Users\\Javier\\Desktop\\Nueva carpeta\\Grupo2SO1\\Administrador de Trareas\\Administrador de Trareas.csproj",
+        "packagesPath": "C:\\Users\\Javier\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Javier\\Desktop\\Nueva carpeta\\Grupo2SO1\\Administrador de Trareas\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -19,7 +19,7 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\abima\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Javier\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
