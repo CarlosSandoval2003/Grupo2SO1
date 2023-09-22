@@ -110,16 +110,32 @@ namespace Administrador
 
         private void TerminateSelectedProcesses(IEnumerable<int> processIds)
         {
+            foreach (var processId in processIds)
+            {
+                try
+                {
+                    Process.GetProcessById(processId).Kill();
+                }
+                catch (Exception)
+                {
+                    // Manejar errores al intentar terminar un proceso
+                }
+            }
         }
+
 
         private void TerminateMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            var selectedProcessIds = GetSelectedProcessIds();
+            TerminateSelectedProcesses(selectedProcessIds);
+            UpdateProcessList();
         }
 
         private void TerminateButton_Click(object sender, RoutedEventArgs e)
         {
-
+            var selectedProcessIds = GetSelectedProcessIds();
+            TerminateSelectedProcesses(selectedProcessIds);
+            UpdateProcessList();
         }
 
         private IEnumerable<int> GetSelectedProcessIds()
@@ -140,32 +156,3 @@ namespace Administrador
 
 }
 
-private void TerminateSelectedProcesses(IEnumerable<int> processIds)
-{
-    foreach (var processId in processIds)
-    {
-        try
-        {
-            Process.GetProcessById(processId).Kill();
-        }
-        catch (Exception)
-        {
-            // Manejar errores al intentar terminar un proceso
-        }
-    }
-}
-
-
-private void TerminateMenuItem_Click(object sender, RoutedEventArgs e)
-{
-    var selectedProcessIds = GetSelectedProcessIds();
-    TerminateSelectedProcesses(selectedProcessIds);
-    UpdateProcessList();
-}
-
-private void TerminateButton_Click(object sender, RoutedEventArgs e)
-{
-    var selectedProcessIds = GetSelectedProcessIds();
-    TerminateSelectedProcesses(selectedProcessIds);
-    UpdateProcessList();
-}
