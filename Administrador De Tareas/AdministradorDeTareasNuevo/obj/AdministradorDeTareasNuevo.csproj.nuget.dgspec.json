@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Javier\\Desktop\\a\\AdministradorDeTareasNuevo\\AdministradorDeTareasNuevo.csproj": {}
+    "C:\\Users\\Javier\\Desktop\\PROYECTO\\Grupo2SO1\\Administrador De Tareas\\AdministradorDeTareasNuevo\\AdministradorDeTareasNuevo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Javier\\Desktop\\a\\AdministradorDeTareasNuevo\\AdministradorDeTareasNuevo.csproj": {
+    "C:\\Users\\Javier\\Desktop\\PROYECTO\\Grupo2SO1\\Administrador De Tareas\\AdministradorDeTareasNuevo\\AdministradorDeTareasNuevo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Javier\\Desktop\\a\\AdministradorDeTareasNuevo\\AdministradorDeTareasNuevo.csproj",
+        "projectUniqueName": "C:\\Users\\Javier\\Desktop\\PROYECTO\\Grupo2SO1\\Administrador De Tareas\\AdministradorDeTareasNuevo\\AdministradorDeTareasNuevo.csproj",
         "projectName": "AdministradorDeTareasNuevo",
-        "projectPath": "C:\\Users\\Javier\\Desktop\\a\\AdministradorDeTareasNuevo\\AdministradorDeTareasNuevo.csproj",
+        "projectPath": "C:\\Users\\Javier\\Desktop\\PROYECTO\\Grupo2SO1\\Administrador De Tareas\\AdministradorDeTareasNuevo\\AdministradorDeTareasNuevo.csproj",
         "packagesPath": "C:\\Users\\Javier\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Javier\\Desktop\\a\\AdministradorDeTareasNuevo\\obj\\",
+        "outputPath": "C:\\Users\\Javier\\Desktop\\PROYECTO\\Grupo2SO1\\Administrador De Tareas\\AdministradorDeTareasNuevo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
